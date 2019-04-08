@@ -1,0 +1,5 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('expimagedownloader.aar'))
+dependencies {
+    implementation 'com.squareup.picasso:picasso:2.71828'
+}
