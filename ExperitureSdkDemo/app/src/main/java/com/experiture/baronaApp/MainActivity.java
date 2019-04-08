@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.experiture.expimagedownloader.ImageParser;
+import com.experiture.expimagedownloader.ImageDownloader;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText editImageUrl;
@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnLoad:
                 String imageUrl = editImageUrl.getText().toString().trim();
                 //Load Image
-                ImageParser.getInstance()
-                        .loadMyImage(imageUrl, imageNature);
+                ImageDownloader.getInstance().loadMyImage(imageUrl, imageNature);
                 break;
         }
     }
